@@ -1,7 +1,13 @@
-console.log(process.argv);
+'use client';
+import TodoForm from '@/components/TodoForm';
 
 const TodoMarketingPage = () => {
-  return <div> TodoMarketingPage </div>;
+  return (
+    <div>
+      TodoMarketingPage
+      <TodoForm />
+    </div>
+  );
 };
 
 export default TodoMarketingPage;
