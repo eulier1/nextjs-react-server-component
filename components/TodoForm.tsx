@@ -2,9 +2,11 @@
 import { useState } from 'react';
 
 const TodoForm = () => {
-  console.log(window);
-
   const [name, setName] = useState('Joe');
+
+  if (window) {
+    console.log(window);
+  }
 
   return (
     <div>
