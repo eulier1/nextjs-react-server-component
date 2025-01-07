@@ -1,25 +1,12 @@
-'use client';
-import { useState } from 'react';
+import { newTodo } from '../utils/actions';
 
 const TodoForm = () => {
-  console.log(window);
-
-  const [name, setName] = useState('Joe');
-
   return (
-    <div>
-      <form>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-      </form>
-    </div>
+    <form action={newTodo}>
+      <label htmlFor="content">Name</label>
+      <input id="content" name="content" type="text" />
+      <button type="submit">New Todo</button>
+    </form>
   );
 };
 
